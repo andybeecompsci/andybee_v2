@@ -4,16 +4,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-type ProjectKey = 'project 1' | 'project 2' | 'project 3' | 'project 4';
+type InterestKey = 'gaming' | 'music' | 'art' | 'travel';
 
-export default function Home() {
-  const [selectedProject, setSelectedProject] = useState<ProjectKey | null>(null);
+export default function Personal() {
+  const [selectedInterest, setSelectedInterest] = useState<InterestKey | null>(null);
 
-  const projects: Record<ProjectKey, string> = {
-    'project 1': 'description for project 1 goes here',
-    'project 2': 'description for project 2 goes here',
-    'project 3': 'description for project 3 goes here',
-    'project 4': 'description for project 4 goes here',
+  const interests: Record<InterestKey, string> = {
+    'gaming': 'souls and tactifps 5v5',
+    'music': 'hiphop',
+    'art': 'manga',
+    'travel': 'mmm',
   };
 
   return (
@@ -47,13 +47,13 @@ export default function Home() {
       <div className="content-grid grid grid-cols-2 gap-20 relative py-0">
         {/* Left Column */}
         <div className="content-left-section">
-          <h2 className="hero-title">welcome!</h2>
+          <h2 className="hero-title">personal!</h2>
           <p className="hero-description mb-8">
-            i'm a software developer, passionate about creating things<br />
-            that people want, and things that work :)
+            this is where i share my personal interests<br />
+            and things i'm passionate about!
           </p>
           <p className="hero-subtitle mb-8">
-            studying IT / computer science / network & security / enterprise systems @ QUT
+            gaming, music, art, and more...
           </p>
           <div className="social-links-container flex space-x-6">
             <Link href="#" className="social-link">email</Link>
@@ -68,18 +68,18 @@ export default function Home() {
 
         {/* Right Column */}
         <div className="content-right-section">
-          <h2 className="projects-title mb-8">selected work</h2>
+          <h2 className="projects-title mb-8">interests</h2>
           {/* Top project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mb-4"></div>
           
           <div className="project-grid">
-            {Object.keys(projects).map((project) => (
+            {Object.keys(interests).map((interest) => (
               <button
-                key={project}
-                onClick={() => setSelectedProject(project as ProjectKey)}
-                className={`project-item text-left ${selectedProject === project ? 'text-main-1' : ''}`}
+                key={interest}
+                onClick={() => setSelectedInterest(interest as InterestKey)}
+                className={`project-item text-left ${selectedInterest === interest ? 'text-main-1' : ''}`}
               >
-                {project}
+                {interest}
               </button>
             ))}
           </div>
@@ -87,10 +87,10 @@ export default function Home() {
           {/* Bottom project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mt-4 mb-4"></div>
           <p className="project-helper">
-            {selectedProject ? projects[selectedProject] : 'select a project :)'}
+            {selectedInterest ? interests[selectedInterest] : 'select an interest :)'}
           </p>
         </div>
       </div>
     </div>
   )
-}
+} 

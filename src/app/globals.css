@@ -5,14 +5,15 @@
 :root {
   --background: #181818;
   --main-0: #87856d;
-  --main-1: #d18458;
+  --main-1: #bf6f41;
+  --main-2: #96ad86;
 }
 
 /* Base Styles */
 body {
   color: var(--main-0);
   background: var(--background);
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-vt323);
 }
 
 /* Layout Containers */
@@ -30,20 +31,21 @@ body {
 
 /* Header Section */
 .header-logo-container {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   color: var(--main-1);
 }
 
 .header-title {
   color: var(--main-0);
-  font-size: 1.75rem;
+  font-size: 3rem;
+  text-transform: none;
 }
 
 .header-nav-link {
   color: var(--main-1);
   transition: opacity 0.2s ease;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 .header-nav-link:hover {
@@ -52,18 +54,19 @@ body {
 
 /* Content Section - Left */
 .hero-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Space between welcome! and description */
 }
 
 .hero-description {
   color: var(--main-0);
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 .hero-subtitle {
   color: var(--main-0);
+  font-size: 1.25rem;
   font-style: italic;
 }
 
@@ -73,20 +76,22 @@ body {
 }
 
 .social-link {
-  color: var(--main-0);
+  color: var(--main-2);
   text-decoration: underline;
   transition: color 0.2s ease;
+  font-size: 1.25rem;
 }
 
 .social-link:hover {
-  color: var(--main-1);
+  color: var(--main-0);
 }
 
 /* Content Section - Right */
 .projects-title {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
   color: var(--main-0);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project-grid {
@@ -98,7 +103,7 @@ body {
 .project-item {
   color: var(--main-0);
   transition: color 0.2s ease;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .project-item:hover {
@@ -107,7 +112,7 @@ body {
 
 .project-helper {
   color: var(--main-0);
-  font-size: 0.875rem;
+  font-size: 1.25rem;
 }
 
 /* Dividers */

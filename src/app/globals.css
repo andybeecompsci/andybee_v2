@@ -3,19 +3,66 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --accent: #ff4f00;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
+}
+
+.welcome-text {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  color: var(--accent);
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.social-link {
+  color: var(--foreground);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--accent);
+}
+
+.project-link {
+  color: var(--foreground);
+  transition: color 0.2s ease;
+  font-size: 1.25rem;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+.selected-work {
+  font-size: 2rem;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  color: var(--accent);
 }

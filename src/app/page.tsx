@@ -4,22 +4,44 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-type ProjectKey = 'project 1' | 'project 2' | 'project 3' | 'project 4';
+type ProjectKey = 'another receiptify' | 'project 2' | 'project 3' | 'project 4';
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<ProjectKey | null>(null);
 
-  const projects: Record<ProjectKey, string> = {
-    'project 1': 'description for project 1 goes here',
-    'project 2': 'description for project 2 goes here',
-    'project 3': 'description for project 3 goes here',
-    'project 4': 'description for project 4 goes here',
-  };
+  // expanded project data structure
+  interface Project {
+    title: ProjectKey;
+    description: string;
+    imageUrl?: string;
+  }
+
+  const projects: Project[] = [
+    {
+      title: 'another receiptify',
+      description: `A fun web app that generates Spotify receipts based on your listening history.Inspired by the simplicity of physical receipts, it showcases your favorite tracks, artists and genres in a creative, shareable format\
+      \n\n users must be registered by yours truly, as i am currently awaiting approval from Spotify for the site to be publically available.
+       please email me your email associated with your Spotify account if you'd like to be registered, so you can `,
+      imageUrl: '/images/receipt-collage.png'
+    },
+    {
+      title: 'project 2',
+      description: 'description for project 2 goes here',
+    },
+    {
+      title: 'project 3',
+      description: 'description for project 3 goes here',
+    },
+    {
+      title: 'project 4',
+      description: 'description for project 4 goes here',
+    },
+  ];
 
   return (
-    <div className="main-container min-h-screen bg-[var(--background)] p-8">
+    <div className="main-container min-h-screen bg-[var(--background)] p-4">
       {/* Header */}
-      <header className="header-container flex justify-between items-center mb-5">
+      <header className="header-container flex justify-between items-center mb-4">
         <div className="header-left-section flex items-center gap-4">
           <div className="header-logo-container">
             <Image
@@ -42,7 +64,7 @@ export default function Home() {
       </header>
 
       {/* Navbar Divider */}
-      <div className="header-divider w-full h-[1px] bg-white/20 mb-10"></div>
+      <div className="header-divider w-full h-[1px] bg-white/20 mb-5"></div>
 
       <div className="content-grid grid grid-cols-2 gap-20 relative py-0">
         {/* Left Column */}
@@ -72,23 +94,85 @@ export default function Home() {
           {/* Top project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mb-4"></div>
           
-          <div className="project-grid">
-            {Object.keys(projects).map((project) => (
+          {/* Project titles row */}
+          <div className="project-titles-grid grid grid-cols-4 gap-4 mb-4">
+            {projects.map((project) => (
               <button
-                key={project}
-                onClick={() => setSelectedProject(project as ProjectKey)}
-                className={`project-item text-left ${selectedProject === project ? 'text-main-1' : ''}`}
+                key={project.title}
+                onClick={() => setSelectedProject(project.title)}
+                className={`project-title text-left hover:text-main-1 ${
+                  selectedProject === project.title ? 'text-main-1' : ''
+                }`}
               >
-                {project}
+                {project.title}
               </button>
             ))}
           </div>
 
-          {/* Bottom project line */}
-          <div className="project-line w-full h-[1px] bg-white/20 mt-4 mb-4"></div>
-          <p className="project-helper">
-            {selectedProject ? projects[selectedProject] : 'select a project :)'}
-          </p>
+          {/* Project content area */}
+          <div className="project-content">
+            {/* Description area */}
+            <div className="project-description-area space-y-1">
+              <div className="description-line w-full h-[1px] bg-white/20"></div>
+              
+              {/* Image placeholder - only show when project selected */}
+              {selectedProject && (
+                <>
+                  <h2 className="projects-title mb-4">
+                    {selectedProject === 'another receiptify' ? (
+                      <a 
+                        href="https://another-receiptify.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-main-1 transition-colors"
+                      >
+                        {selectedProject}
+                      </a>
+                    ) : (
+                      selectedProject
+                    )}
+                  </h2>
+                  <div className="project-image-placeholder w-full h-48 border border-white/20 rounded flex items-center justify-center overflow-hidden">
+                    {selectedProject === 'another receiptify' ? (
+                      <Image
+                        src="/images/receiptify-collage.png"
+                        alt="another receiptify Collage"
+                        width={1600}
+                        height={384}
+                        quality={100}
+                        className="w-full h-full object-cover object-[center_-8%] scale-150"
+                        priority
+                      />
+                    ) : (
+                      '[img]'
+                    )}
+                  </div>
+                </>
+              )}
+
+              <p className="project-description text-white/60">
+                {selectedProject 
+                  ? <>
+                      {projects.find(p => p.title === selectedProject)?.description}
+                      {selectedProject === 'another receiptify' && (
+                        <span className="text-main-2">
+                          <a 
+                            href="https://another-receiptify.vercel.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline text-main-2 hover:text-main-2 transition-colors"
+                          >
+                            try it out
+                          </a>
+                          {' :)'}
+                        </span>
+                      )}
+                    </>
+                  : 'select a project :)'}
+              </p>
+              {/* <div className="description-line w-full h-[1px] bg-white/20"></div> */}
+            </div>
+          </div>
         </div>
       </div>
     </div>

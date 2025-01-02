@@ -4,9 +4,9 @@
 
 :root {
   --background: #181818;
-  --main-0: #87856d;
+  --main-0: #b0ad8f;
   --main-1: #bf6f41;
-  --main-2: #96ad86;
+  --main-2: #a3bd91;
 }
 
 /* Base Styles */
@@ -14,6 +14,7 @@ body {
   color: var(--main-0);
   background: var(--background);
   font-family: var(--font-vt323);
+  overflow: hidden;
 }
 
 /* Layout Containers */
@@ -121,5 +122,48 @@ body {
 }
 
 .content-divider {
+  /* styles inherited from Tailwind classes */
+}
+
+/* Project Section */
+.project-titles-grid {
+  /* styles inherited from Tailwind classes */
+}
+
+.project-title {
+  color: var(--main-0);
+  transition: color 0.2s ease;
+  font-size: 1.5rem;
+}
+
+.project-title:hover {
+  color: var(--main-1);
+}
+
+.project-content {
+  /* styles inherited from Tailwind classes */
+}
+
+.project-description-area {
+  /* styles inherited from Tailwind classes */
+}
+
+.project-image-placeholder {
+  color: var(--main-0);
+  transition: opacity 0.3s ease;
+}
+
+.project-image-placeholder:hover {
+  opacity: 0.9;
+}
+
+.project-description {
+  color: var(--main-0);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.description-line {
   /* styles inherited from Tailwind classes */
 }

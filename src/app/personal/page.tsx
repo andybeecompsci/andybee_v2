@@ -17,9 +17,9 @@ export default function Personal() {
   };
 
   return (
-    <div className="main-container min-h-screen bg-[var(--background)] p-8">
+    <div className="main-container min-h-screen bg-[var(--background)] p-4">
       {/* Header */}
-      <header className="header-container flex justify-between items-center mb-5">
+      <header className="header-container flex justify-between items-center mb-4">
         <div className="header-left-section flex items-center gap-4">
           <div className="header-logo-container">
             <Image
@@ -42,7 +42,7 @@ export default function Personal() {
       </header>
 
       {/* Navbar Divider */}
-      <div className="header-divider w-full h-[1px] bg-white/20 mb-10"></div>
+      <div className="header-divider w-full h-[1px] bg-white/20 mb-5"></div>
 
       <div className="content-grid grid grid-cols-2 gap-20 relative py-0">
         {/* Left Column */}

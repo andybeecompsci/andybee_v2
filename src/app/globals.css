@@ -3,55 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --background: #1a1a1a;
-  --foreground: #ffffff;
-  --accent: #ff4f00;
+  --background: #181818;
+  --main-0: #87856d;
+  --main-1: #d18458;
 }
 
+/* Base Styles */
 body {
-  color: var(--foreground);
+  color: var(--main-0);
   background: var(--background);
   font-family: var(--font-geist-sans);
 }
 
-.welcome-text {
+/* Layout Containers */
+.main-container {
+  /* styles inherited from Tailwind classes */
+}
+
+.header-container {
+  /* styles inherited from Tailwind classes */
+}
+
+.content-grid {
+  /* styles inherited from Tailwind classes */
+}
+
+/* Header Section */
+.header-logo-container {
+  width: 50px;
+  height: 50px;
+  color: var(--main-1);
+}
+
+.header-title {
+  color: var(--main-0);
+  font-size: 1.75rem;
+}
+
+.header-nav-link {
+  color: var(--main-1);
+  transition: opacity 0.2s ease;
+  font-size: 1.75rem;
+}
+
+.header-nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Content Section - Left */
+.hero-title {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.nav-link {
-  color: var(--accent);
-  transition: opacity 0.2s ease;
+.hero-description {
+  color: var(--main-0);
+  font-size: 1.125rem;
 }
 
-.nav-link:hover {
-  opacity: 0.8;
+.hero-subtitle {
+  color: var(--main-0);
+  font-style: italic;
+}
+
+/* Social Links Section */
+.social-links-container {
+  /* styles inherited from Tailwind classes */
 }
 
 .social-link {
-  color: var(--foreground);
+  color: var(--main-0);
   text-decoration: underline;
   transition: color 0.2s ease;
 }
 
 .social-link:hover {
-  color: var(--accent);
+  color: var(--main-1);
 }
 
-.project-link {
-  color: var(--foreground);
-  transition: color 0.2s ease;
-  font-size: 1.25rem;
-}
-
-.project-link:hover {
-  color: var(--accent);
-}
-
-.selected-work {
+/* Content Section - Right */
+.projects-title {
   font-size: 2rem;
-  color: var(--foreground);
+  color: var(--main-0);
   margin-bottom: 2rem;
 }
 
@@ -61,8 +95,26 @@ body {
   gap: 1rem;
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
-  color: var(--accent);
+.project-item {
+  color: var(--main-0);
+  transition: color 0.2s ease;
+  font-size: 1.25rem;
+}
+
+.project-item:hover {
+  color: var(--main-1);
+}
+
+.project-helper {
+  color: var(--main-0);
+  font-size: 0.875rem;
+}
+
+/* Dividers */
+.header-divider {
+  /* styles inherited from Tailwind classes */
+}
+
+.content-divider {
+  /* styles inherited from Tailwind classes */
 }

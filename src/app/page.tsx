@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-type ProjectKey = 'another receiptify' | 'project 2' | 'project 3' | 'project 4';
+type ProjectKey = 'another receiptify' | 'macro' | 'SolSpear' | 'project 4';
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<ProjectKey | null>(null);
@@ -25,12 +25,19 @@ export default function Home() {
       imageUrl: '/images/receipt-collage.png'
     },
     {
-      title: 'project 2',
-      description: 'description for project 2 goes here',
+      title: 'macro',
+      description: 'macro is a  cross-platform Macro Tracking mobile app that allows seamless macronutrient and calorie tracking with additional barcode integration. Built with React Native, SQLite for offline storage, and Jest for testing,\
+      \n\n STILL IN DEVELOPMENT',
     },
     {
-      title: 'project 3',
-      description: 'description for project 3 goes here',
+      title: 'SolSpear',
+      description: 'SolSpear is a dynamic, real-time wallet activity tracker designed for Solana,\
+       offering insights into token swaps and transfers across all DEXes and aggregators.\
+        It decodes SPL Token Program instructions to provide DEX-agnostic transaction details,\
+         ensuring compatibility with multi-hop routes like Jupiter. By leveraging WebSocket subscriptions,\
+          it delivers instant updates without polling and dynamically resolves token metadata using on-chain methods.\
+           SolSpear offers a scalable and efficient solution for monitoring wallet activities directly through your Discord server\
+           \n\n STILL IN DEVELOPMENT',
     },
     {
       title: 'project 4',

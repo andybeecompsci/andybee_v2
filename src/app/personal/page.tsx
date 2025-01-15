@@ -48,11 +48,11 @@ export default function Personal() {
         {/* Left Column */}
         <div className="content-left-section">
           <h2 className="hero-title">personal!</h2>
-          <p className="hero-description mb-8 text-sm sm:text-base">
+          <p className="hero-description mb-8">
             this is where i share my personal interests<br className="hidden sm:inline" />
             and things i'm passionate about!
           </p>
-          <p className="hero-subtitle mb-8 text-sm sm:text-base">
+          <p className="hero-subtitle mb-8">
             gaming, music, art, and more...
           </p>
           <div className="social-links-container flex flex-wrap gap-4 sm:gap-0 sm:space-x-6 justify-center sm:justify-start">
@@ -64,7 +64,7 @@ export default function Personal() {
         </div>
 
         {/* Vertical Divider - Hide on mobile */}
-        <div className="content-divider hidden sm:block absolute left-1/2 top-0 w-[1px] h-[265%] bg-white/20 transform -translate-x-1/2"></div>
+        <div className="content-divider hidden sm:block absolute left-1/2 top-0 w-[1px] h-[305%] bg-white/20 transform -translate-x-1/2"></div>
 
         {/* Right Column */}
         <div className="content-right-section mt-10 sm:mt-0">
@@ -72,12 +72,12 @@ export default function Personal() {
           {/* Top project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mb-4"></div>
           
-          <div className="project-grid">
+          <div className="project-titles-grid">
             {Object.keys(interests).map((interest) => (
               <button
                 key={interest}
                 onClick={() => setSelectedInterest(interest as InterestKey)}
-                className={`project-item text-left ${selectedInterest === interest ? 'text-main-1' : ''}`}
+                className={`project-title text-left ${selectedInterest === interest ? 'text-main-1' : ''}`}
               >
                 {interest}
               </button>
@@ -86,7 +86,7 @@ export default function Personal() {
 
           {/* Bottom project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mt-4 mb-4"></div>
-          <p className="project-helper max-h-[60vh] overflow-y-auto pr-2">
+          <p className="project-description max-h-[60vh] overflow-y-auto pr-2">
             {selectedInterest ? interests[selectedInterest] : 'select an interest :)'}
           </p>
         </div>

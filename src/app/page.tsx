@@ -89,7 +89,7 @@ export default function Home() {
         </div>
 
         {/* Vertical Divider - Hide on mobile */}
-        <div className="content-divider hidden sm:block absolute left-1/2 top-0 w-[1px] h-[265%] bg-white/20 transform -translate-x-1/2"></div>
+        <div className="content-divider hidden sm:block absolute left-1/2 top-0 w-[1px] h-[305%] bg-white/20 transform -translate-x-1/2"></div>
 
         {/* Right Column */}
         <div className="content-right-section mt-10 sm:mt-0">
@@ -147,7 +147,7 @@ export default function Home() {
                         priority
                       />
                     ) : (
-                      '[img]'
+                      '[photo coming soon]'
                     )}
                   </div>
                 </>

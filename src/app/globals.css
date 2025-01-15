@@ -121,26 +121,26 @@ body::-webkit-scrollbar {
 .hero-title {
   font-size: 3.5rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   color: var(--main-0);
   opacity: 0.85;
 }
 
 .hero-description {
   color: var(--main-0);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   opacity: 0.85;
 }
 
 .hero-subtitle {
   color: var(--main-0);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-style: italic;
   line-height: 1.6;
   opacity: 0.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* studying text specific style */
@@ -157,7 +157,7 @@ body::-webkit-scrollbar {
   color: var(--main-2);
   text-decoration: underline;
   transition: color 0.2s ease;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
@@ -218,7 +218,7 @@ body::-webkit-scrollbar {
 .project-title {
   color: var(--main-0);
   transition: color 0.2s ease;
-  font-size: 1.15rem;
+  font-size: 1.75rem;
   opacity: 0.85;
 }
 

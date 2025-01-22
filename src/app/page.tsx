@@ -86,7 +86,7 @@ export default function Home() {
             <Link href="mailto:andersonjbee@gmail.com" className="social-link" target="_blank" rel="noopener noreferrer">email</Link>
             <Link href="https://github.com/andybeecompsci" className="social-link" target="_blank" rel="noopener noreferrer">github</Link>
             <Link href="https://www.linkedin.com/in/anderson-be3" className="social-link" target="_blank" rel="noopener noreferrer">linkedin</Link>
-            <Link href="https://open.spotify.com/user/y74axlou6bkr879jlvxsyptdt?si=af1ff70ecb36432b" className="social-link" target="_blank" rel="noopener noreferrer">spotify</Link>
+            <Link href="https://open.spotify.com/user/y74axlou6bkr879jlvxsyptdtdt?si=af1ff70ecb36432b" className="social-link" target="_blank" rel="noopener noreferrer">spotify</Link>
           </div>
         </div>
 
@@ -145,7 +145,7 @@ export default function Home() {
                         width={1600}
                         height={384}
                         quality={100}
-                        className="w-full h-full object-cover object-[center_-8%] scale-150"
+                        className="w-full h-full object-cover sm:object-[center_-8%] sm:scale-150 object-[center_-200%] scale-[2.5]"
                         priority
                       />
                     ) : (

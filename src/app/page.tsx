@@ -19,7 +19,7 @@ export default function Home() {
   const projects: Project[] = [
     {
       title: 'another receiptify',
-      description: `A fun web app that genera7tes Spotify receipts based on your listening history.Inspired by the simplicity of physical receipts, it showcases your favorite tracks, artists and genres in a creative, shareable format\
+      description: `A fun web app that generates Spotify receipts based on your listening history.Inspired by the simplicity of physical receipts, it showcases your favorite tracks, artists and genres in a creative, shareable format\
       \n\n users must be registered by yours truly, as i am currently awaiting approval from Spotify for the site to be publically available.
        please email me your email associated with your Spotify account if you'd like to be registered, so you can `,
       imageUrl: '/images/receipt-collage.png'

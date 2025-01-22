@@ -19,7 +19,7 @@ export default function Home() {
   const projects: Project[] = [
     {
       title: 'another receiptify',
-      description: `A fun web app that generates Spotify receipts based on your listening history.Inspired by the simplicity of physical receipts, it showcases your favorite tracks, artists and genres in a creative, shareable format\
+      description: `A fun web app that genera7tes Spotify receipts based on your listening history.Inspired by the simplicity of physical receipts, it showcases your favorite tracks, artists and genres in a creative, shareable format\
       \n\n users must be registered by yours truly, as i am currently awaiting approval from Spotify for the site to be publically available.
        please email me your email associated with your Spotify account if you'd like to be registered, so you can `,
       imageUrl: '/images/receipt-collage.png'
@@ -74,11 +74,13 @@ export default function Home() {
         <div className="content-left-section">
           <h2 className="hero-title">welcome!</h2>
           <p className="hero-description mb-8">
-            i'm a software developer, passionate about creating things<br className="hidden sm:inline" />
-            that people want, and things that work :)
+            i'm a software developer, i love to build.<br/>
+             preferably things people want :)
           </p>
           <p className="hero-subtitle mb-8">
-            studying IT / computer science / network & security / enterprise systems @ QUT
+            graduate of 2025 <br/>
+            studying IT / computer science / network & security / enterprise systems @ QUT <br/>
+            open to roles from jan'25
           </p>
           <div className="social-links-container flex flex-wrap gap-4 sm:gap-0 sm:space-x-6 justify-center sm:justify-start">
             <Link href="mailto:andersonjbee@gmail.com" className="social-link" target="_blank" rel="noopener noreferrer">email</Link>

@@ -47,13 +47,12 @@ export default function Personal() {
       <div className="content-grid grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-20 relative py-0">
         {/* Left Column */}
         <div className="content-left-section">
-          <h2 className="hero-title">personal!</h2>
+          <h2 className="hero-title">hey!</h2>
           <p className="hero-description mb-8">
-            this is where i share my personal interests<br className="hidden sm:inline" />
-            and things i'm passionate about!
+            this is where i share random stuff and what i'm into
           </p>
           <p className="hero-subtitle mb-8">
-            gaming, music, art, and more...
+            currently enjoying - Slay The Spire and React Native
           </p>
           <div className="social-links-container flex flex-wrap gap-4 sm:gap-0 sm:space-x-6 justify-center sm:justify-start">
             <Link href="mailto:andersonjbee@gmail.com" className="social-link" target="_blank" rel="noopener noreferrer">email</Link>
@@ -64,7 +63,7 @@ export default function Personal() {
         </div>
 
         {/* Vertical Divider - Hide on mobile */}
-        <div className="content-divider hidden sm:block absolute left-1/2 top-0 w-[1px] h-[305%] bg-white/20 transform -translate-x-1/2"></div>
+        <div className="content-divider hidden sm:block absolute left-1/2 top-0 w-[1px] h-[357%] bg-white/20 transform -translate-x-1/2"></div>
 
         {/* Right Column */}
         <div className="content-right-section mt-10 sm:mt-0">

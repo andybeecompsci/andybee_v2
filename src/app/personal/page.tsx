@@ -36,7 +36,7 @@ export default function Personal() {
           <ul className="header-nav-list">
             <li><Link href="/" className="header-nav-link">my work</Link></li>
             <li><Link href="/personal" className="header-nav-link">personal</Link></li>
-            <li><Link href="/rand/AndersonBee__Resume real.pdf" className="header-nav-link" target="_blank" rel="noopener noreferrer">resumé</Link></li>
+            <li><Link href="/rand/AndersonBee__Resume_2025.pdf" className="header-nav-link" target="_blank" rel="noopener noreferrer">resumé</Link></li>
           </ul>
         </nav>
       </header>

@@ -74,8 +74,8 @@ export default function Home() {
         <div className="content-left-section">
           <h2 className="hero-title">welcome!</h2>
           <p className="hero-description mb-8">
-            i'm a software developer, i love to build.<br/>
-             preferably things people want :)
+            i'm a software developer.<br/>
+             building things people want :)
           </p>
           <p className="hero-subtitle mb-8">
             graduate of 2025 <br/>

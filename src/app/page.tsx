@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-type ProjectKey = 'another receiptify' | 'macro' | 'SolSpear';
+type ProjectKey = 'another receiptify' | 'macro' | 'SolSpear' | 'PinBlog';
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState<ProjectKey | null>(null);
@@ -37,7 +37,15 @@ export default function Home() {
          ensuring compatibility with multi-hop routes like Jupiter. By leveraging WebSocket subscriptions,\
           it delivers instant updates without polling and dynamically resolves token metadata using on-chain methods.\
            SolSpear offers a scalable and efficient solution for monitoring wallet activities directly through your Discord server\
-           \n\n STILL IN DEVELOPMENT',
+           \n\n STILL IN LATE DEVELOPMENT',
+    },
+    {
+      title: 'PinBlog',
+      description: 'PinBlog is a Pinterest content creation tool that helps users find trending topics,\
+       generate AI-written blog posts, and design Pinterest-optimized images to drive traffic.\
+        Built using Next.js, React, Node.js, Express, Puppeteer, GPT-4 API, and Canva API,\
+         it allows users to discover high-engagement trends, create SEO-friendly content, and generate eye-catching Pins for seamless marketing.\
+         \n\n STILL IN DEVELOPMENT',
     },
   ];
 
@@ -100,7 +108,7 @@ export default function Home() {
           <div className="project-line w-full h-[1px] bg-white/20 mb-4"></div>
           
           {/* Project titles row */}
-          <div className="project-titles-grid grid grid-cols-4 gap-4 mb-4">
+          <div className="flex justify-evenly mb-4">
             {projects.map((project) => (
               <button
                 key={project.title}

@@ -167,6 +167,7 @@ export default function Home() {
                       {projects.find(p => p.title === selectedProject)?.description}
                       {selectedProject === 'another receiptify' && (
                         <span className="text-main-2">
+                          <br />
                           <a 
                             href="https://another-receiptify.vercel.app"
                             target="_blank"

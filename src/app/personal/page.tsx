@@ -4,16 +4,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
-type InterestKey = 'coming soon' | 'coming sooon' | 'coming soooon' | 'coming sooooon';
+type InterestKey = 'v1';
 
 export default function Personal() {
   const [selectedInterest, setSelectedInterest] = useState<InterestKey | null>(null);
 
   const interests: Record<InterestKey, string> = {
-    'coming soon': 'coming soon',
-    'coming sooon': 'coming soon',
-    'coming soooon': 'coming soon',
-    'coming sooooon': 'coming soon',
+    'v1': 'mmm one day '
   };
 
   return (
@@ -67,7 +64,7 @@ export default function Personal() {
 
         {/* Right Column */}
         <div className="content-right-section mt-10 sm:mt-0">
-          <h2 className="projects-title mb-8">interests</h2>
+          <h2 className="projects-title mb-8">blog</h2>
           {/* Top project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mb-4"></div>
           
@@ -86,7 +83,7 @@ export default function Personal() {
           {/* Bottom project line */}
           <div className="project-line w-full h-[1px] bg-white/20 mt-4 mb-4"></div>
           <p className="project-description max-h-[60vh] overflow-y-auto pr-2">
-            {selectedInterest ? interests[selectedInterest] : 'select an interest :)'}
+            {selectedInterest ? interests[selectedInterest] : 'i will add to this one day'}
           </p>
         </div>
       </div>

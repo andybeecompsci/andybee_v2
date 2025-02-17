@@ -154,6 +154,16 @@ export default function Home() {
                         className="w-full h-full object-cover sm:object-[center_-8%] sm:scale-150 object-[center_-200%] scale-[2.5]"
                         priority
                       />
+                    ) : selectedProject === 'SolSpear' ? (
+                      <Image
+                        src="/images/SOLSPEAR_BANNER.png"
+                        alt="SolSpear Banner"
+                        width={1600}
+                        height={384}
+                        quality={100}
+                        className="w-full h-full object-cover"
+                        priority
+                      />
                     ) : (
                       '[photo coming soon]'
                     )}

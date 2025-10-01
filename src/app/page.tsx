@@ -93,6 +93,7 @@ export default function Home() {
             <Link href="https://github.com/andybeecompsci" className="social-link" target="_blank" rel="noopener noreferrer">github</Link>
             <Link href="https://www.linkedin.com/in/anderson-be3" className="social-link" target="_blank" rel="noopener noreferrer">linkedin</Link>
             <Link href="https://open.spotify.com/user/y74axlou6bkr879jlvxsyptdtdt?si=af1ff70ecb36432b" className="social-link" target="_blank" rel="noopener noreferrer">spotify</Link>
+            <Link href="/approved-auditor (4).xlsx" className="social-link" target="_blank" rel="noopener noreferrer" download>excel sheet</Link> 
           </div>
         </div>
 
